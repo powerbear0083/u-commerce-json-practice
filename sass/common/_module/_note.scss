@@ -1,0 +1,15 @@
+/**
+ * Set up note and warning css setting
+ */
+
+/* Note box style css setting
+   ========================================================================== */
+
+.n-note{
+	&__box-lv2{
+		background-color: $yellow-light;
+		padding: 10px;
+		color: $c-primary;
+	}
+
+}

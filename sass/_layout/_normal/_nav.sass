@@ -1,0 +1,279 @@
+/**
+ * Main nav css setting
+ */
+
+.n-nav
+	&__wrap
+		background-color: $c-white
+		border-top: 1px solid $gray-gainsboro
+		border-bottom: 3px solid $c-deep-pink
+		+transition(0.1s ease-in-out)
+		.n-layout
+			+clearfix
+	&__box
+		width: 230px
+		position: relative
+		z-index: map-get($zindex, third)
+		margin-right: 20px
+		h2 
+			background-color: $c-deep-pink
+			+font-size(15)
+			height: 37px
+			padding: 8px 10px 8px 15px
+			p
+				cursor: pointer 
+				color:  $c-white
+				display: block
+		.n-icon--menu
+			margin-top: 5px
+	// &__box:hover
+	// 	.n-nav--fixed
+	// 		background-color: $c-white
+	// 		visibility: visible
+	// 		opacity: 1
+	// 		top: 45px
+	&__menu 
+		background-color: rgba($c-white, 0.9)
+		border: 1px solid $gray-gainsboro
+		border-top: none
+		width: 230px
+		height: 560px
+		position: absolute
+		z-index: map-get($zindex, elt)
+		top: 40px
+		//display: none
+		a 
+			color: $c-gray
+		> li
+			+clearfix
+			position: relative
+			z-index: map-get($zindex, base)
+			border-top: 1px solid 
+			border-bottom: 1px solid
+			border-color: rgba($c-white, 0)
+			padding: 4px 0
+			padding-left: 15px
+			height: (560px / 18)
+			&:hover
+				cursor: pointer
+				background-color: $c-white
+				border-top: 1px solid $c-deep-pink
+				border-bottom: 1px solid $c-deep-pink
+				border-right: 1px solid $c-white
+				.n-nav__catalog, .n-nav__keywords a
+					color: $c-deep-pink
+				.is-hover--bg
+					border-right: 1px solid $c-white
+					position: absolute
+					z-index: map-get($zindex, dropdown)
+					height: 29px
+					right: -2px
+					top: 0
+	&__menu > li:first-child .n-nav__sub
+		width: 590px 
+		height: 510px
+	&__menu > li:first-child .n-nav__catalog-box
+		width: inherit
+		height: 560px
+		overflow: hidden
+	&--fixed
+		+transition(all 0.2s ease-in-out)
+		display: block
+		visibility: hidden
+		opacity: 0
+		top: 30px
+	&__count
+		background-color: rgba($c-deep-pink, 0.95)
+		color: $c-white
+		+font-size(11)
+		width: 18px
+		height: 18px
+		position: absolute
+		z-index: map-get($zindex, second)
+		+border-radius(4px)
+		text-align: center
+		left: -5px
+		top: -1px
+		+transition(0.2s ease-in-out)
+	&__menu li:hover
+		.n-nav__count
+			width: 28px
+			height: 32px
+			padding: 1px
+			left: 0
+	&__menu li.n-nav--move:hover
+		.n-nav__catalog
+			margin-right: 0
+			margin-left: 20px
+	&__catalog
+		float: left
+		+font-size(15)
+		font-weight: bold
+		width: 60px
+		+txt-ellipsis(64)
+		margin-right: 20px
+		+transition(0.2s ease-in-out)
+	&__keywords
+		+txt-ellipsis(118)
+		padding-top: 2px
+		float: left
+		a:first-child
+			margin-right: 10px
+	&__sub
+		display: none
+		+clearfix
+		background-color: $c-white
+		border: 1px solid $c-deep-pink
+		position: absolute
+		z-index: map-get($zindex, dropdown)
+		width: 800px
+		height: 560px
+		top: -1px
+		left: 228px
+	&__catalog-box
+		width: (800px * 0.71)	
+		float: left	
+		padding: 25px
+		height: 560px
+		overflow: hidden
+	&__catalog-sub
+		+clearfix
+		&:first-child
+			margin-bottom: 30px
+		.n-nav__caption
+			+font-size(13px)
+			border-bottom: 1px solid $gray-gainsboro
+			padding-bottom: 10px
+			margin-bottom: 15px
+		li 
+			width: 32.5%
+			display: inline-block
+			margin-bottom: 10px
+			+txt-ellipsis(169)
+			a:hover
+				color: $c-deep-pink
+	&__flagship-sub
+		margin-bottom: 0
+		+clearfix
+		a:hover
+			color: $c-deep-pink
+	&__flagship-menu
+		width: 20%
+		height: 460px
+		padding-top: 5px
+		padding-bottom: 5px
+		border-right: 2px solid $gray-gainsboro
+		li 
+			margin-bottom: 5px
+			position: relative
+			z-index: map-get($zindex, base)
+		li > a 
+			border: 1px solid $c-white
+			border-left: 4px solid $c-white
+			border-right: none
+			padding: 10px
+			font-weight: bold
+			display: block	
+			+txt-ellipsis(106)		
+		li > a:hover, .current
+			border: 1px solid $gray-gainsboro
+			border-left: 4px solid $c-deep-pink
+			border-right: none
+		li > a:hover:after, .current:after
+			content: ""
+			position: absolute
+			z-index: map-get($zindex, second)
+			background-color: $c-white
+			width: 2px
+			height: 38px
+			right: -2px
+			top: 1px
+	&__flagship-wrap
+		width: 80%
+		height: 460px
+		overflow: hidden
+		position: relative
+		z-index: map-get($zindex, base)
+	&__flagship-category
+		position: absolute
+		z-index: map-get($zindex, third)
+		padding: 15px 20px
+		width: 100%
+		height: 460px
+		overflow: hidden
+		left: 0
+		top: 0
+		// display: none
+		+clearfix
+		li 
+			width: 190px
+			+txt-ellipsis(190)
+			display: inline-block
+			margin-bottom: 10px
+		li:nth-child(odd)
+			margin-right: 5px
+	&__flagship-category:first-child
+		// display: block
+	&__promo
+		+clearfix
+		border-left: 6px solid $gray-subduedgray
+		width: (800px * 0.28)
+		height: 557px
+		position: relative
+		z-index: map-get($zindex, base)
+		overflow: hidden
+	&__promo-two
+		li 
+			display: inline-block
+			padding: 10px 15px 10px
+			width: 100%
+		li:first-child
+			padding-top: 15px
+		img 
+			width: 80px
+			height: 80px
+		.n-pic
+			margin-right: 10px
+		.n-pd_name
+			margin-bottom: 15px
+			height: 36px
+			overflow: hidden
+	&__promo-single
+		border-top: 6px solid $gray-subduedgray
+		padding: 10px 22px 0
+		width: 218px
+		height: 255px
+		position: absolute
+		z-index: map-get($zindex, second)
+		bottom: 0
+		.n-pd__box, .n-pic, img 
+			width: 170px
+			margin-left: auto
+			margin-right: auto
+		.n-pic, img 
+			height: 170px
+		.n-pd__box
+			line-height: 1.8
+			margin-bottom: 5px
+			width: 170px
+			div 
+				width: inherit
+				overflow: hidden
+		.n-pd_name
+			max-width: 100%
+			font-weight: bold
+			+font-size(15)
+		.n-pd_name, .n-pd__sub
+			+txt-ellipsis(170)
+	&__hotkeyword
+		+txt-ellipsis(770)
+		padding-top: 12px
+		li 
+			display: inline-block
+			margin-right: 20px
+		a 
+			color:  $c-gray
+			display: block
+			&:hover
+				color: $c-deep-pink
+

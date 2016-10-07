@@ -1,0 +1,41 @@
+/**
+ * Management z-index setting
+ */
+
+/* Common z-index setting
+   ========================================================================== */
+/**
+ * Usage
+ * 
+ * parent selectors
+	z-index: map-get($zindex, base)
+	child selectors
+		z-index: map-get($zindex, dropdown)
+ */
+
+$zindex: (
+	modal: 9000,
+	overlay: 8000,
+	dropdown: 7000,
+	backTop: 6000,
+	bnNav: 500,
+	elt:10,
+	third: 3,
+	second: 2,
+	base: 1,
+	under: -1
+);
+
+/* Base z-index setting
+   ========================================================================== */
+/**
+ * Usage
+ * 
+ * parent selectors
+	z-index: index($base-zindex, zindex1)
+	child selectors
+		z-index: index($base-zindex, zindex2)
+ */
+
+$base-zindex: zindex1, zindex2;
+

@@ -1,0 +1,15 @@
+/**
+ * Set up Susy base set
+ */
+
+@import "susy";
+
+$susy: (  
+    gutters: 0,              
+    math: fluid,            
+    output: float,  
+    gutter-position: inside,
+); 
+
+
+

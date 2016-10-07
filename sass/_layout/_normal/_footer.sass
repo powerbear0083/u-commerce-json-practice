@@ -1,0 +1,61 @@
+/**
+ * Footer css setting
+ */
+
+
+.n-footer
+	background-color: $c-white
+	border-top: 3px solid $c-deep-pink
+	a 
+		color: $c-gray
+		&:hover
+			color: $c-primary
+
+.n-footer
+	&__nav, &__wrap, &__copyright
+		+clearfix
+	&__nav
+		padding-top: 15px
+		padding-bottom: 15px
+		li 
+			display: inline-block
+		.n-left
+			li
+				margin-right: 30px
+		.n-right
+			li
+				margin-left: 30px
+	&__nav-lv2
+		background-color: $c-subduedgray
+		border-top: 1px solid $gray-gainsboro
+		border-bottom: 1px solid $gray-gainsboro
+		margin-bottom: 20px
+	&__wrap
+		margin-bottom: 20px
+		.n-right 
+			li
+				display: inline-block
+				margin-left: 5px
+				vertical-align: top
+			// img 
+			// 	width: 90%
+	&__fb
+		width: 350px
+		height: 65px
+		overflow: hidden
+	&__info p, &__caption
+		display: inline-block
+	&__info
+		width: 100%
+		li 
+			margin-bottom: 5px
+		p 
+			width: 64%
+	&__caption
+		width: 33%
+	&__copyright
+		border-top: 1px solid $gray-gainsboro
+		padding-top: 20px
+		padding-bottom: 20px
+		span:first-child
+			padding-right: 20px

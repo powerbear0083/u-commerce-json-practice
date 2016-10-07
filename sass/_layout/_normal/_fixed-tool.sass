@@ -1,0 +1,100 @@
+/**
+ * fixed fool setting
+ */
+
+.n-fixed
+	&__tool
+		position: fixed
+		z-index: map-get($zindex, backTop)
+		width: 90px
+		top: 266px
+		right: 0
+		text-align: center
+		a 
+			color: $c-gray
+	&__switch, &__top
+		display: block
+	&__switch
+		background-color: $gray-subduedgray
+		border: 1px solid $gray-gainsboro
+		margin-bottom: 2px
+		padding-top: 5px
+		padding-bottom: 5px
+		&:hover
+			background-color: darken($gray-subduedgray, 5%)
+	&__ad
+		+transition(0.2s ease-in-out)
+		li 
+			margin-bottom: 2px
+	&__cart a, &__top
+		background-color: $c-gray
+		&:hover
+			background-color: darken($c-gray, 5%)
+	&__cart
+		a 
+			display: block
+			color: $c-white
+			padding: 5px
+		.n-icon--cart
+			vertical-align: -5px
+			margin-right: 5px
+		margin-bottom: 40px
+	&__cart:hover .n-fixed__cart-info
+		opacity: 1
+		visibility: visible
+	&__cart-info
+		background-color: darken($c-gray, 5%)
+		color: $c-white
+		padding: 8px
+		position: absolute
+		z-index: map-get($zindex, backTop)
+		width: 110px
+		left: -120px
+		bottom: 40px
+		text-align: left
+		visibility: hidden
+		opacity: 0
+		&:after
+			content: ''
+			position: absolute
+			z-index: map-get($zindex, backTop)
+			right: -8px
+			top: 8px
+			width: 0
+			height: 0
+			border-top: 8px solid transparent
+			border-left: 8px solid darken($c-gray, 5%)
+			border-bottom: 8px solid transparent
+		p 
+			margin-bottom: 5px
+
+	&__top
+		padding-top: 2px
+		height: 28px
+
+
+.n-fixed__tool.n-is--active
+	width: 30px
+	.n-fixed__ad
+		display: none
+		position: absolute
+		z-index: map-get($zindex, second)
+		right: -120px
+		width: 90px
+		height: 324px
+		img 
+			width: 90px
+			max-width: none
+	.n-fixed__switch
+		background-color: $c-gray
+		color: $c-white
+		padding: 8px
+		margin-bottom: 300px
+		&:hover
+			background-color: darken($c-gray, 5%)
+	.n-fixed__cart
+		margin-top: -280px
+		margin-bottom: 300px
+	.n-fixed__cart-info
+		top: 110px
+		height: 60px

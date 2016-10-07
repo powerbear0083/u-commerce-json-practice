@@ -1,0 +1,36 @@
+/**
+ * Main nav css setting
+ */
+
+.n-nav
+	&__box
+		width: 190px
+		.n-icon--menu
+			margin-top: 5px
+	&__menu
+		width: 190px
+		> li
+			padding: 4px 0
+			padding-left: 6px
+	&__catalog 
+		+font-size(13)
+		padding-top: 2px
+		margin-right: 3px
+	&__sub
+		left: 188px
+	&__count
+		top: -2px
+		left: -10px
+	&__menu li.n-nav--move:hover
+		.n-nav__catalog
+			margin-left: 25px
+			margin-right: -5px
+	&__keywords
+		+font-size(12)
+		+txt-ellipsis(116)
+	&__keywords
+		a:first-child
+			margin-right: 5px
+	&__hotkeyword
+		+txt-ellipsis(750)
+

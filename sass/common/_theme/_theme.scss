@@ -1,0 +1,81 @@
+/**
+ * Set up Global theme css setting
+ */
+
+/* Global setting
+   ========================================================================== */
+
+.n-promo--gray{
+	@include background-image(linear-gradient(to bottom, $gray-gainsboro, $c-white 40%));
+}
+
+.n-bg--shadow{
+	background-color: rgba($c-gray-darker, 0.2);
+	width: 20%;
+	height: 5px;
+	@include border-radius(100%);
+	@include box-shadow(rgba($c-gray-darker, 0.2) 0 0 30px 20px); 
+	@include transform(scale(0.5)); 
+	position: absolute;
+	z-index: map-get($zindex, under);
+	left: 0;
+	right: 0;
+	bottom: 78px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* Category block color setting
+   ========================================================================== */
+
+.n-color--denim{
+	background-color: rgba($denim, 0.9);
+}
+
+.n-color--cerulean{
+	background-color: rgba($cerulean, 0.9);
+}
+
+.n-color--french-rose{
+	background-color: rgba($french-rose, 0.9);
+}
+
+.n-color--lavender{
+	background-color: rgba($lavender, 0.9);
+}
+
+.n-color--deluge{
+	background-color: rgba($deluge, 0.9);
+}
+
+.n-color--persian-pink{
+	background-color: rgba($persian-pink, 0.9);
+}
+
+.n-color--locust{
+	background-color: rgba($locust, 0.9);
+}
+
+.n-color--celery{
+	background-color: rgba($celery, 0.9);
+}
+
+.n-color--apple{
+	background-color: rgba($apple, 0.9);
+}
+
+.n-color--golden-grass{
+	background-color: rgba($golden-grass, 0.9);
+}
+
+.n-line--separate {
+	border: none;
+	height: 1px;
+	background-color: $gray-gainsboro;
+}
+
+
+// .bg--white{
+// 	background-color: $c-white;
+// }

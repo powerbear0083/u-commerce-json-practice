@@ -1,0 +1,541 @@
+/**
+ * large size index css
+ */
+
+.n-content
+	+clearfix
+	&__nav-fake
+		position: absolute
+		z-index: map-get($zindex, second)
+		left: 50%
+		margin-left: -630px
+		width: 230px
+		height: 558px
+		.n-nav__menu
+			display: block
+			top: 0
+		.n-nav__sub
+			display: none
+
+.n-banner
+	&__wrap
+		background-color: $gray-gainsboro
+		margin-bottom: 20px
+		position: relative
+		z-index: map-get($zindex, second)
+	&__area, &__main
+		position: relative
+		z-index: map-get($zindex, base)
+	&__theme
+		position: absolute
+		z-index: map-get($zindex, under)
+		width: 100%
+		height: 300px
+		left: 0
+		top: 0
+	&__box
+		+clearfix
+		width: 100%
+		width: 1260px
+		margin-left: auto
+		margin-right: auto
+		padding-left: 230px
+	&__nav
+		position: absolute
+		z-index: map-get($zindex, bnNav)
+		bottom: 0
+		width: 150px
+		margin-left: auto
+		margin-right: auto
+		left: 0
+		right: 0
+		text-align: center
+		a 
+			background-color: rgba($c-gray, 0.85)
+			+border-radius(100%)
+			display: inline-block
+			width: 20px
+			height: 20px
+			margin-left: 5px
+			margin-right: 5px
+		.activeSlide
+			background: none
+			border: 4px solid $c-white
+	&__promo
+		background-color: rgba($c-white, 0.9)
+		width: 210px
+		height: 280px
+		margin-top: 10px
+		margin-right: 10px
+		padding: 20px 12px
+		a 
+			color: $c-gray
+		li 
+			+clearfix
+			&:first-child
+				margin-bottom: 40px
+		.n-pic
+			margin-right: 10px
+			overflow: hidden
+		.n-pd_name
+			margin-bottom: 5px
+			height: 55px
+			overflow: hidden
+
+.n-l-aside
+	margin-right: 20px
+.n-rank
+	&__wrap
+		background-color: $c-white
+		border: 1px solid $gray-gainsboro
+		margin-top: 258px
+		margin-bottom: 18px
+		width: 230px
+		height: 630px
+		position: relative
+		z-index: map-get($zindex, base)
+		a 
+			color: $c-gray
+	&__nav
+		+clearfix
+		li 
+			float: left
+			width: 50%
+			text-align: center
+			border-bottom: 1px solid $gray-gainsboro
+		li:first-child 
+			border-right: 1px solid $gray-gainsboro
+		a 
+			background-color: $gray-subduedgray
+			display: block
+			padding-top: 10px
+			padding-bottom: 10px
+			&:hover
+				color: $c-deep-pink
+		.current 
+			position: relative
+			z-index: map-get($zindex, base)
+			border-bottom: 1px solid $c-white
+			a 
+				background-color: $c-white
+				color: $c-deep-pink
+				font-weight: bold
+			&:after 
+				position: absolute
+				z-index: map-get($zindex, second)
+				border-bottom: 1px solid $c-white
+				content: ''
+				display: block
+				border-top: 4px solid $c-deep-pink
+				width: 100%	
+				top: 0
+	&__list
+		padding-left: 15px
+		padding-right: 15px
+		li 
+			border-bottom: 1px dotted $gray-gainsboro
+			padding-top: 15px
+			padding-bottom: 15px
+			+clearfix
+		li:nth-child(5)
+			border-bottom: none
+		a 
+			display: block	
+			position: relative
+			z-index: map-get($zindex, second)
+		.n-pic 
+			float: left
+			margin-right: 15px
+			overflow: hidden
+		.n-pd_name
+			margin-bottom: 15px
+			height: 36px
+			overflow: hidden
+	&__flag
+		position: absolute
+		z-index: map-get($zindex, third)
+		width: 40px
+		height: 40px
+		left: 0
+		top: 0
+		color: $c-white
+	&__num 
+		position: absolute
+		z-index: map-get($zindex, elt)
+		top: 5px
+		left: 8px
+	&__flag-bg
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 40px 40px 0 0
+		border-color: rgba($c-deep-pink, 0.9) transparent transparent transparent
+	&__more
+		background-color: $c-subduedgray
+		display: block
+		color: $c-gray
+		padding: 8px 0
+		width: 228px
+		height: 35px
+		margin-left: -15px
+		text-align: center
+		&:hover
+			color: $c-deep-pink
+
+.n-fb__warp
+	height: 340px
+	overflow: hidden
+
+.n-l-main
+	+clearfix
+
+.n-main
+	&__wrap
+		background-color: $c-white
+		border: 1px solid $gray-gainsboro
+		margin-right: 20px
+		width: 370px
+		height: 410px
+	&__title 
+		+clearfix
+		.n-icon--tv, .n-icon--clock
+			vertical-align: top
+			margin-right: 5px
+	&__title-tips
+		color: $c-deep-pink
+		padding-left: 10px
+		line-height: 210%	
+	&__tv-nav
+		margin-top: 6px
+		li
+			display: inline-block
+		a 
+			color: $c-gray
+			border-right: 1px solid $gray-gainsboro
+			display: block
+			padding-left: 2px
+			padding-right: 8px
+			&:hover
+				color: $c-deep-pink
+		li:last-child a
+			border-right: none
+			padding-right: 0
+	&__list
+		padding: 15px 14px
+		> li 
+			border-bottom: 1px dotted $gray-gainsboro
+			padding-bottom: 15px
+			margin-bottom: 15px
+			+clearfix
+		> li:last-child 
+			border-bottom: none
+			padding-bottom: 0
+			margin-bottom: 0
+		a 
+			display: block
+			color: $c-gray
+		a:hover
+			.n-pd_name
+				text-decoration: underline
+		.n-pic 
+			margin-right: 10px
+		.n-pd_name
+			margin-bottom: 10px
+			height: 55px
+			overflow: hidden
+	&__list-tv
+		li 
+			position: relative
+			z-index: map-get($zindex, base)
+		.n-main--channel
+			background-color: rgba($c-deep-pink, 0.9)
+			position: absolute
+			z-index: map-get($zindex, second)
+			color: $c-white
+			padding: 2px 5px
+			left: 0
+			top: 0
+		.n-price--lv1
+			margin-bottom: 15px
+		.n-btn
+			display: inline-block
+			color: $c-white
+	&__detail
+		width: 180px
+	&__caption
+		margin-bottom: 10px
+		color: $c-white
+		padding: 5px 10px
+		width: 180px
+		+clearfix
+	&__caption.n-main--live
+		background-color: $c-primary
+	&__caption.n-main--coming
+		background-color: $yellow
+	&__price
+		span
+			margin-right: 10px
+		span:last-child
+			margin-right: 0
+	&__txt
+		padding-top: 3px
+	&__clock
+		+clearfix
+		li 
+			background-color: $c-gray-darker
+			float: left
+			padding: 3px 5px
+		.n-main__clock-separate
+			background: none
+			padding-left: 0
+			padding-right: 0
+
+.n-r__aside
+	width: 230px
+	height: 410px
+.n-login
+	&__wrap
+		background-color: $c-white
+		border: 1px solid $gray-gainsboro
+		padding-top: 10px
+		padding-bottom: 10px
+	&__box
+		padding-left: 15px
+		padding-right: 15px
+		.n-btn--lv2
+			margin-right: 10px
+	&__title
+		font-weight: bold
+		+font-size(15)
+		margin-bottom: 5px
+	&__txt
+		line-height: 1.8
+		margin-bottom: 10px
+	&__links
+		margin-top: 10px
+		margin-left: 20px
+		li 
+			margin-bottom: 5px
+		a 
+			color: $c-blue
+			&:hover
+				text-decoration: underline
+	&__signed .n-login__txt, &__coupon
+		padding-left: 15px
+		padding-right: 15px
+	&__signed
+		margin-top: -4px
+		.n-login__txt 
+			margin-top: 10px
+	&__coupon
+		margin-bottom: 20px
+		li 
+			position: relative
+			z-index: map-get($zindex, base)
+			margin-bottom: 8px
+
+			span
+				margin-left: 10px
+			span:nth-child(2)
+				font-weight: bold
+				+font-size(15)
+				color: $c-primary
+		li:after
+			content: ''
+			position: absolute
+			z-index: map-get($zindex, second)
+			+bg-sprite(sprite, icon-list-arrow)
+			left: -3px
+			top: 5px
+
+.n-info
+	&__wrap
+		background-color: $c-white
+		border: 1px solid $gray-gainsboro
+		border-top: none
+	&__nav
+		background-color: $gray-subduedgray
+		border-bottom: 1px solid $gray-gainsboro
+		+clearfix
+		li
+			width: (228px / 3)
+			float: left
+			text-align: center
+			border-right: 1px solid $gray-gainsboro
+		a 
+			background-color: $gray-subduedgray
+			display: block
+			padding-top: 10px
+			padding-bottom: 10px
+			color: $c-gray
+			&:hover
+				color: $c-deep-pink
+		.current 
+			position: relative
+			z-index: map-get($zindex, base)
+			background-color: $c-white
+			a 
+				background-color: $c-white
+				color: $c-deep-pink
+			&:after
+				content: ''
+				cursor: pointer
+				border-top: 4px solid $c-deep-pink
+				border-bottom: 5px solid $c-white
+				position: absolute
+				z-index: map-get($zindex, second)
+				width: 100%
+				height: 102%
+				top: 0
+				left: 0
+		li:nth-child(3)
+			border-right: none
+	&__ad
+		padding: 20px 20px 20px
+		a 
+			display: block
+			width: 190px
+			overflow: hidden
+			color: $c-gray
+		li:first-child 
+			margin-bottom: 17px
+		
+	&__ad-txt
+		list-style-position: inside
+		li, li:first-child
+			margin-bottom: 7px
+		li
+			height: 36px
+			overflow: hidden
+		a:hover
+			text-decoration: underline
+
+.n-main
+	&__promo
+		+clearfix
+		li 
+			float: left
+			margin-right: 15px
+			width: 190px
+			height: 260px
+			overflow: hidden
+			text-align: center
+			+box-shadow(rgba($c-gray-darker, 0.2) 0 1px 2px)
+			position: relative
+			z-index: map-get($zindex, base)
+		li:last-child 
+			margin-right: 0
+		a 
+			color: $c-gray
+			display: block
+		.n-pic
+			padding-top: 15px
+		img 
+			margin-left: -12.5px
+			max-width: 190px
+	&__mask
+		width: 165px
+		margin-right: auto
+		margin-left: auto
+		overflow: hidden
+	&__promo-title
+		// background-color: rgba($c-white, 0.9)
+		background-color: #FFF
+		position: absolute
+		z-index: map-get($zindex, second)
+		width: 190px
+		height: 60px
+		left: 0
+		right: 0
+		bottom: 0
+		margin-left: auto
+		margin-right: auto
+		padding-top: 8px
+		padding-bottom: 8px
+		.title--lv4
+			margin-bottom: 5px
+.n-main__promo-title .title--lv4, .n-main__promo-title p
+	+txt-ellipsis(180)
+	padding-left: 15px
+	padding-right: 15px
+	margin-left: auto
+	margin-right: auto
+
+.n-self
+	&__box
+		background-color: $c-white
+		border: 1px solid $gray-gainsboro
+		height: 535px
+		a 
+			color: $c-gray
+	&__title
+		+clearfix
+		margin-bottom: 23px
+		.n-icon--refresh
+			vertical-align: top
+			margin-right: 5px
+	&__refresh
+		padding-top: 5px
+		&:hover
+			color: $c-deep-pink
+			.n-icon--refresh
+				@include bg-sprite(sprite, icon-refresh-hover)
+	&__list
+		+clearfix
+		li 
+			+span(1 of 5)
+			margin-bottom: 15px
+		a 
+			display: block
+			margin-left: 20px
+			margin-right: 20px
+		.n-pic, .n-pd_name
+			margin-bottom: 10px
+		.n-pic
+			overflow: hidden
+		.n-pd_name
+			+txt-ellipsis(160)
+
+.n-bank
+	&__wrap
+		background-color: $c-white
+		border: 1px solid $gray-gainsboro
+	&__list
+		margin-left: -8px
+		margin-right: -8px
+		padding: 15px
+		+clearfix
+		li 
+			+span(1 of 6)
+		a 
+			padding-left: 8px
+			padding-right: 8px
+			display: block
+			width: 190px	
+		img 
+			max-width: 190px
+.n-guide
+	&__nav
+		display: none
+		position: fixed
+		z-index: map-get($zindex, backTop)
+		width: 45px
+		top: 20%
+		left: 50%
+		margin-left: -685px
+		text-align: center
+		a 
+			background-color: $c-white
+			border: 1px solid $gray-gainsboro
+			border-bottom: none
+			color: $c-gray
+			display: block
+			padding: 6px 8px
+		a:hover, .current a
+			background-color: $c-deep-pink
+			color: $c-white
+		li:last-child
+			a
+				border-bottom: 1px solid $gray-gainsboro
+
+

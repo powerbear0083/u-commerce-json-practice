@@ -1,0 +1,71 @@
+/**
+ * Global css setting
+ */
+
+/* Global layout setting
+   ========================================================================== */
+
+.n-wrapper{
+	background-color: $c-subduedgray;
+}
+
+.n-layout{
+	width: 1260px;
+	margin-right: auto;
+	margin-left: auto;
+	@include clearfix;
+}
+
+.n-w-1010{
+	width: 1010px;
+}
+
+
+.n-l-row20{
+	margin-bottom: 20px;
+}
+
+.n-l-row30{
+	margin-bottom: 30px;
+}
+
+.n-l-row__ad{
+	margin-bottom: 30px;
+	position: relative;
+	z-index: map-get($zindex, base);
+	a, img{
+		display: inline-block;
+	}
+	a:nth-child(2){
+		margin-left: 34px;
+		margin-right: 33px;
+	}
+}
+
+/* Global OOCSS setting
+   ========================================================================== */
+
+.n-left{
+	float: left;
+}
+.n-right{
+	float: right;
+}
+.n-clear{
+	clear: both;
+}
+
+.n-center{
+	text-align: center;
+}
+// .n-align--r{
+// 	text-align: right;
+// }
+
+/* Global title setting
+   ========================================================================== */
+
+.n-l__title{
+	border-bottom: 1px solid $gray-gainsboro;
+	padding: 8px 15px;
+}

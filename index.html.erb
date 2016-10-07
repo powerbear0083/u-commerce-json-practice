@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<!--[if lt IE 9]>	
+<script type="text/javascript" src="js201607/vendor/html5shiv.js"></script>
+<![endif]-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>森森購物網、U-mall、U-life電視購物台</title>
+<%= render :partial => "/partial/global/meta" %>
+<link href="css201607/common/magnific-popup.css" rel="stylesheet" />
+<link href="css201607/common/autocomplete.css" rel="stylesheet" />
+<link href="css201607/common/n-crazy-ad.css" rel="stylesheet" />
+<link href="css201607/common/n-global.css" rel="stylesheet" />
+<link href="css201607/normal/n-layout.css" rel="stylesheet" />
+<link href="css201607/normal/n-index.css" rel="stylesheet" />
+<link rel="stylesheet" media="screen and (max-width: 1024px)" href="css201607/small/n-small-layout.css" />
+<link rel="stylesheet" media="screen and (max-width: 1024px)" href="css201607/small/n-s-index.css" />
+</head>
+<body>
+<div class="n-wrapper">
+	<%= render :partial => "/partial/global/header" %>
+	<%= render :partial => "/partial/global/nav" %>
+	<main class="n-container">
+		<%= render :partial => "/partial/index/banner-area" %>
+		<%= render :partial => "/partial/index/mian-area" %>
+		<div id="categItem" class="n-layout">
+			<%= render :partial => "/partial/index/category01" %>
+			<%= render :partial => "/partial/index/category02" %>
+			<%= render :partial => "/partial/index/category03" %>
+			<%= render :partial => "/partial/index/bank-list" %>
+			<%= render :partial => "/partial/global/youlike" %>
+		</div>
+	</main>
+	<%= render :partial => "/partial/global/footer" %>
+	<ul id="guideNav" class="n-guide__nav">
+		<li><a href="#categItem1" title="美妝保養">美妝保養</a></li>
+		<li><a href="#categItem2" title="保健養生">保健養生</a></li>
+		<li><a href="#categItem3" title="24H快配">24H快配</a></li>
+		<li><a href="#categItem4" title="精品鞋包">精品鞋包</a></li>
+		<li><a href="#categItem5" title="傢居寢具">傢居寢具</a></li>
+		<li><a href="#categItem6" title="服飾內著">服飾內著</a></li>
+		<li><a href="#categItem7" title="生活用品">生活用品</a></li>
+		<li><a href="#categItem8" title="生活家電">生活家電</a></li>
+		<li><a href="#categItem9" title="3C 科技">3C 科技</a></li>
+		<li><a href="#categItem10" title="旅遊運動">旅遊運動</a></li>
+		<li><a href="#guselike" title="猜你喜歡">猜你喜歡</a></li>
+	</ul>
+	<%= render :partial => "/partial/global/fixed-tool" %>
+	<= render :partial => "/partial/index/ponta-terms" %>
+</div>
+<div id="fb-root"></div>
+<script type="text/javascript" src="js201607/vendor/jquery.1.11.1.min.js"></script>
+<script type="text/javascript" src="js201607/vendor/jquery.cycle2.js"></script>
+<script type="text/javascript" src="js201607/vendor/jquery.menu-aim.js"></script>
+<script type="text/javascript" src="js201607/vendor/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="js201607/vendor/social.media.api.js"></script>
+<script type="text/javascript" src="js201607/vendor/global.effect.js"></script>
+<script type="text/javascript" src="js201607/pages/homepage.effect.js"></script>
+<script type="text/javascript" src="js201607/prototyping.js"></script>
+</body>
+</html>

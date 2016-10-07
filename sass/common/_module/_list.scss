@@ -1,0 +1,32 @@
+/**
+ * Set up List css setting
+ */
+
+
+
+/* list style css setting
+   ========================================================================== */
+
+
+.list--disc > li{
+	list-style-type: disc;
+}
+
+.list--decimal > li{
+	list-style-type: decimal;
+}	
+
+// .list--leading-zero > li{
+// 	list-style-type: decimal-leading-zero;
+// }
+
+// .list--cjk-style > li{
+// 	list-style-type: cjk-ideographic;
+// }
+
+
+// .list--circle > li {
+// 	list-style-type:circle;
+// }
+
+

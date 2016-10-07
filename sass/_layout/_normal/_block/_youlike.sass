@@ -1,0 +1,45 @@
+/**
+ * youlike block css setting
+ */
+
+.n-youlike
+	&__warp
+		margin-top: 10px
+	&__title
+		text-align: center
+		position: relative
+		z-index: map-get($zindex, base)
+		margin-bottom: 20px
+		.title--lv2
+			span
+				background-color: $c-subduedgray
+				padding: 10px
+		.n-line--separate
+			position: absolute
+			z-index: map-get($zindex, under)
+			width: 25%
+			height: 2px
+			margin-left: auto
+			margin-right: auto
+			left: 0
+			right: 0
+			top: 5px
+	&__list
+		+clearfix
+		li 
+			background-color: $c-white
+			border: 1px solid $gray-gainsboro
+			width: (1260px - 60px) / 5
+			float: left
+			margin-right: 15px
+			margin-bottom: 20px
+			padding: 20px	
+		li:nth-child(5n+5)
+			margin-right: 0
+		a 
+			color: $c-gray
+		.n-pic, .n-pd_name
+			margin-bottom: 10px
+		.n-pd_name
+			height: 36px
+			overflow: hidden

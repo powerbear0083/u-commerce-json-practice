@@ -1,0 +1,63 @@
+/**
+ * fixed fool setting
+ */
+
+
+/* index overlay
+   ========================================================================== */
+
+.n-overlay__index
+	position: fixed
+	width: 650px
+	margin-left: auto
+	margin-right: auto
+	top: 15%
+	left: 0
+	right: 0
+
+.n-terms
+	&__wrap
+		background-color: #FFF
+		border: 6px solid $c-gray-darker
+		padding: 15px
+		position: relative
+		z-index: map-get($zindex, base)
+		.mfp-close
+			right: -25px
+			top: -25px
+	&__title
+		margin-bottom: 20px
+	&__pic
+		margin-bottom: 15px
+	&__box
+		padding-left: 20px
+		padding-right: 20px
+		.n-left, .n-right
+			width: 48%
+			margin-bottom: 20px
+		.title--lv4
+			margin-bottom: 5px
+		.list--decimal
+			margin-left: 20px
+		p 
+			margin-top: 10px
+			line-height: 1.8
+	&__checkbox
+		margin-bottom: 5px
+		label 
+			cursor: pointer
+			margin-right: 10px
+	&__rule
+		border: 1px solid $gray-gainsboro
+		height: 120px
+		overflow-x: hidden
+		padding: 8px
+		a 
+			color: $c-blue
+		a:hover
+			text-decoration: underline
+	&__btn
+		margin-top: 20px
+
+.n-disable--overlay
+	background: none

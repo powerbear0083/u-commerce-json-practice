@@ -1,0 +1,88 @@
+/**
+ * Typography css setting
+ */
+
+/* Common title setting
+   ========================================================================== */
+
+%font-bold{
+	font-weight: bold;
+}
+
+// .title--lv1{
+// 	@include font-size(24);
+// 	@extend %font-bold;
+// }
+.title--lv2{
+	@include font-size(18);
+	@extend %font-bold;
+}
+.title--lv3{
+	@include font-size(15);
+	@extend %font-bold;
+}
+.title--lv4{
+	@include font-size(13);
+	@extend %font-bold;
+}
+
+
+/* Common font setting
+   ========================================================================== */
+
+.n-font--red{
+	color: $c-primary
+}
+
+// .font--bold{
+// 	font-weight: bold;
+// }
+
+
+/* Price setting
+   ========================================================================== */
+
+.n-price--lv1{
+	color: $c-primary;
+ 	span{
+ 		@include font-size(16);
+ 		font-weight: bold;
+ 		padding-left: 2px;
+ 	}
+}
+
+.n-price--del{
+	color: $c-bodygray;
+	text-decoration: line-through;
+}
+
+
+// .prc--lv2{
+// 	color: $c-primary;
+//  	span{
+//  		@include font-size(26);
+//  		font-weight: bold;
+//  		padding-left: 2px;
+//  	}
+// }
+
+// .prc-line{
+// 	color: $c-bodygray;
+// 	text-decoration: line-through;
+// }
+
+/* Hr setting
+   ========================================================================== */
+
+// .hr--lv1{
+// 	border: none;
+// 	border-top: 1px solid $c-lightgray;
+// 	margin: 10px 0; 
+// }
+
+/* Txt color setting
+   ========================================================================== */
+
+ // .c--bodygray{
+ // 	color: $c-bodygray;
+ // }

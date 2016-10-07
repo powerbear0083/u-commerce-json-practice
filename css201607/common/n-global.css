@@ -1,0 +1,789 @@
+@charset "UTF-8";
+/**
+ * Set up Etmall site variable
+ */
+/* Primary color setting
+   ========================================================================== */
+/* Gray color setting
+   ========================================================================== */
+/* font color setting
+   ========================================================================== */
+/* Category color setting
+   ========================================================================== */
+/* Font family setting
+   ========================================================================== */
+/**
+ * Set up All Mixins functions
+ */
+/* base layout align center
+   ========================================================================== */
+/* background setting
+   ========================================================================== */
+/* breakpoint
+   ========================================================================== */
+/* background auto generate width height
+   ========================================================================== */
+/* Clear Float
+   ========================================================================== */
+/* list custom style
+   ========================================================================== */
+/* font size
+   ========================================================================== */
+/* hide text
+   ========================================================================== */
+/* ellipsis text
+   ========================================================================== */
+/* keyframes
+   ========================================================================== */
+/* animation
+   ========================================================================== */
+/* animation-name
+   ========================================================================== */
+/* animation-delay
+   ========================================================================== */
+/**
+ * Management z-index setting
+ */
+/* Common z-index setting
+   ========================================================================== */
+/**
+ * Usage
+ * 
+ * parent selectors
+	z-index: map-get($zindex, base)
+	child selectors
+		z-index: map-get($zindex, dropdown)
+ */
+/* Base z-index setting
+   ========================================================================== */
+/**
+ * Usage
+ * 
+ * parent selectors
+	z-index: index($base-zindex, zindex1)
+	child selectors
+		z-index: index($base-zindex, zindex2)
+ */
+/**
+ * Set up Susy base set
+ */
+/**
+ * Base on Eric Meyer Css Reset 
+ * Initialization all html tag default value
+ */
+div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* Initialization tag
+   ========================================================================== */
+/**
+ * HTML5 display-role reset for older browsers
+ */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * setting page default font siez
+ * font-size: 62.5%; -->  10 ÷ 16 × 100% = 62.5%
+ */
+html {
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 13px;
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, 'LiHei', "Microsoft JhengHei", "PMingLiU", "微軟正黑體", "新細明體", sans-serif;
+  color: #525252;
+  line-height: 1.4;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  height: 0;
+}
+
+/* Embedded content
+   ========================================================================== */
+img, embed, object {
+  display: block;
+  max-width: 100%;
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+input, select {
+  vertical-align: middle;
+}
+
+input, button, textarea, select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+}
+
+input[type="submit"], input[type="radio"], input[type="checkbox"], input[type="button"], input[type="reset"] {
+  cursor: pointer;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  padding: 0;
+}
+
+button, select {
+  cursor: pointer;
+}
+
+/* Links
+   ========================================================================== */
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+/* lists
+   ========================================================================== */
+/**
+ * clear ol, ul list style
+ */
+ul, ol {
+  list-style: none;
+}
+
+/* box-sizing
+   ========================================================================== */
+/**
+ * clear all box-sizing setting
+ */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * Set up button elements setting
+ */
+/* Button core
+   ========================================================================== */
+.n-btn {
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
+.n-btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Button Style 
+   ========================================================================== */
+.n-btn {
+  border: 1px solid;
+  border-color: transparent;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #F01400;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+.n-btn:focus {
+  outline: 0;
+}
+
+.n-btn--hidden {
+  display: none;
+}
+
+.n-btn--primary, .n-btn--primary-active {
+  color: #fff;
+  background-color: #F01400;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.n-btn--lv2 {
+  background-color: rgba(240, 20, 0, 0.1);
+  color: #F01400;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+}
+.n-btn--lv2:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 2px solid #F01400;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.n-btn--lv2:hover, .n-btn--lv2:focus {
+  background-color: rgba(240, 20, 0, 0.2);
+  color: #F01400;
+}
+
+.n-btn--primary:hover, .n-btn--primary:focus, .n-btn--primary-active:hover, .n-btn--primary-active:focus {
+  background-color: #d61200;
+}
+
+.n-btn--disabled {
+  background-color: #f7f7f7;
+  border: 1px solid #e1e1e1;
+  cursor: not-allowed;
+  color: #999999;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.n-btn--disabled:hover, .n-btn--disabled:focus, .n-btn--disabled:active {
+  cursor: not-allowed;
+  background-color: #f7f7f7;
+  border: 1px solid #e1e1e1;
+}
+
+/* Button Size
+   ========================================================================== */
+.n-btn--small {
+  font-size: 13px;
+  font-size: 1.3rem;
+  padding: 5px 20px;
+}
+
+.n-btn--large {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+/**
+ * Set up form elements setting
+ */
+/* Form core
+   ========================================================================== */
+.n-form--control {
+  padding: 11px;
+  display: inline-block;
+  border: 1px solid #e1e1e1;
+  color: #525252;
+  vertical-align: middle;
+}
+
+/* Form common style
+   ========================================================================== */
+.n-form--radio {
+  margin-right: 20px;
+}
+.n-form--radio label {
+  cursor: pointer;
+}
+
+/* Focus style
+   ========================================================================== */
+.n-form--control:focus {
+  outline: 0;
+  border-color: #005599;
+}
+
+/* Have value style
+   ========================================================================== */
+/* Disable style
+   ========================================================================== */
+.n-form--disabled {
+  cursor: not-allowed;
+  background-color: #999999;
+  color: #525252;
+}
+.n-form--disabled:focus {
+  border-color: #e1e1e1;
+}
+
+/* inline layout style
+   ========================================================================== */
+.n-form--inline {
+  display: inline-block;
+}
+
+/* Stacked layout style
+   ========================================================================== */
+.n-form--stacked input[type="text"],
+.n-form--stacked input[type="password"],
+.n-form--stacked input[type="email"],
+.n-form--stacked input[type="url"],
+.n-form--stacked input[type="date"],
+.n-form--stacked input[type="month"],
+.n-form--stacked input[type="time"],
+.n-form--stacked input[type="datetime"],
+.n-form--stacked input[type="datetime-local"],
+.n-form--stacked input[type="week"],
+.n-form--stacked input[type="number"],
+.n-form--stacked input[type="search"],
+.n-form--stacked input[type="tel"],
+.n-form--stacked input[type="color"],
+.n-form--stacked input[type="file"],
+.n-form--stacked select,
+.n-form--stacked label,
+.n-form--stacked textarea {
+  display: block;
+}
+
+/* Form theme
+   ========================================================================== */
+.form--error {
+  color: #F01400;
+}
+
+/**
+ * Typography css setting
+ */
+/* Common title setting
+   ========================================================================== */
+.title--lv2, .title--lv3, .title--lv4 {
+  font-weight: bold;
+}
+
+.title--lv2 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.title--lv3 {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+.title--lv4 {
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+/* Common font setting
+   ========================================================================== */
+.n-font--red {
+  color: #F01400;
+}
+
+/* Price setting
+   ========================================================================== */
+.n-price--lv1 {
+  color: #F01400;
+}
+.n-price--lv1 span {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-left: 2px;
+}
+
+.n-price--del {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+/* Hr setting
+   ========================================================================== */
+/* Txt color setting
+   ========================================================================== */
+/**
+ * Set up icon elements setting
+ */
+/* Icon's global setting
+   ========================================================================== */
+[class^="n-icon--"] {
+  display: inline-block;
+}
+
+/* Icon's setting
+   ========================================================================== */
+.n-icon--dropmenu {
+  background: url('/img201607/sprite-s9a197ac2df.png') 0 -44px;
+  width: 9px;
+  height: 5px;
+}
+
+.n-icon--menu {
+  background: url('/img201607/sprite-s9a197ac2df.png') 0 -62px;
+  width: 15px;
+  height: 11px;
+}
+
+.n-icon--search {
+  background: url('/img201607/sprite-s9a197ac2df.png') 0 -109px;
+  width: 18px;
+  height: 18px;
+}
+
+.n-icon--tv {
+  background: url('/img201607/sprite-s9a197ac2df.png') 0 -152px;
+  width: 24px;
+  height: 24px;
+}
+
+.n-icon--clock {
+  background: url('/img201607/sprite-s9a197ac2df.png') 0 -20px;
+  width: 24px;
+  height: 24px;
+}
+
+.n-icon--refresh {
+  background: url('/img201607/sprite-s9a197ac2df.png') 0 -91px;
+  width: 18px;
+  height: 18px;
+}
+
+.n-icon-list--arrow {
+  background: url('/img201607/sprite-s9a197ac2df.png') 0 -49px;
+  width: 13px;
+  height: 13px;
+}
+
+.n-icon--top {
+  background: url('/img201607/sprite-s9a197ac2df.png') 0 -127px;
+  width: 25px;
+  height: 25px;
+}
+
+.n-icon--cart {
+  background: url('/img201607/sprite-s9a197ac2df.png') 0 0;
+  width: 20px;
+  height: 20px;
+}
+
+/**
+ * Set up note and warning css setting
+ */
+/* Note box style css setting
+   ========================================================================== */
+.n-note__box-lv2 {
+  background-color: #fffde8;
+  padding: 10px;
+  color: #F01400;
+}
+
+/**
+ * Set up List css setting
+ */
+/* list style css setting
+   ========================================================================== */
+.list--disc > li {
+  list-style-type: disc;
+}
+
+.list--decimal > li {
+  list-style-type: decimal;
+}
+
+/**
+ * Set up Global status css setting
+ */
+/* Global setting
+   ========================================================================== */
+.n-is--hide {
+  display: none;
+}
+
+.n-l-row__ad .loading__box img {
+  width: 41px;
+}
+
+/* .loading{
+  &__wrap, &__box{
+    position: absolute;
+    z-index: map-get($zindex, under);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__wrap{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  &__box{
+    width: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+  }
+  &__process{
+    position: relative;
+    z-index: map-get($zindex, under);
+  }
+  &__process li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 2px;
+    margin-left: 2px;
+    border-radius: 100%;
+    background-color: rgba($c-bodygray, 1);
+    @include animation (loading 1.2s infinite ease-in-out);
+  }
+  &__process li:nth-child(1){
+    @include animation-delay (.39s);
+  }
+  &__process li:nth-child(2){
+    @include animation-delay (.52s);
+  }
+  &__process li:nth-child(3){
+    @include animation-delay (.65s);
+  }
+} */
+@-webkit-keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* nav setting
+   ========================================================================== */
+.n-nav__wrap.is--fixed {
+  position: fixed;
+  z-index: 8000;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.n-nav__wrap.is--fixed .n-nav__hotkeyword {
+  max-width: 360px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.n-nav__wrap.is--fixed .n-search--for-nav {
+  display: block;
+}
+.n-nav__wrap.is--fixed .n-search__field {
+  margin-bottom: 0;
+}
+
+/* hover effect
+   ========================================================================== */
+.n-hover--img a img {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -moz-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+.n-hover--img a:hover img {
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -moz-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+.n-hover--line li {
+  -moz-box-shadow: rgba(45, 45, 45, 0.1) 0 1px 2px;
+  -webkit-box-shadow: rgba(45, 45, 45, 0.1) 0 1px 2px;
+  box-shadow: rgba(45, 45, 45, 0.1) 0 1px 2px;
+  -moz-transition: linear 0.3s;
+  -o-transition: linear 0.3s;
+  -webkit-transition: linear 0.3s;
+  transition: linear 0.3s;
+}
+
+.n-hover--line li:hover {
+  -moz-box-shadow: rgba(45, 45, 45, 0.5) 0 2px 3px;
+  -webkit-box-shadow: rgba(45, 45, 45, 0.5) 0 2px 3px;
+  box-shadow: rgba(45, 45, 45, 0.5) 0 2px 3px;
+  -moz-transition: linear 0.5s;
+  -o-transition: linear 0.5s;
+  -webkit-transition: linear 0.5s;
+  transition: linear 0.5s;
+}
+
+/**
+ * Set up Global theme css setting
+ */
+/* Global setting
+   ========================================================================== */
+.n-promo--gray {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UxZTFlMSIvPjxzdG9wIG9mZnNldD0iNDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e1e1e1), color-stop(40%, #ffffff));
+  background-image: -moz-linear-gradient(top, #e1e1e1, #ffffff 40%);
+  background-image: -webkit-linear-gradient(top, #e1e1e1, #ffffff 40%);
+  background-image: linear-gradient(to bottom, #e1e1e1, #ffffff 40%);
+}
+
+.n-bg--shadow {
+  background-color: rgba(45, 45, 45, 0.2);
+  width: 20%;
+  height: 5px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -moz-box-shadow: rgba(45, 45, 45, 0.2) 0 0 30px 20px;
+  -webkit-box-shadow: rgba(45, 45, 45, 0.2) 0 0 30px 20px;
+  box-shadow: rgba(45, 45, 45, 0.2) 0 0 30px 20px;
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 78px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Category block color setting
+   ========================================================================== */
+.n-color--denim {
+  background-color: rgba(27, 105, 205, 0.9);
+}
+
+.n-color--cerulean {
+  background-color: rgba(10, 170, 230, 0.9);
+}
+
+.n-color--french-rose {
+  background-color: rgba(242, 90, 144, 0.9);
+}
+
+.n-color--lavender {
+  background-color: rgba(193, 117, 217, 0.9);
+}
+
+.n-color--deluge {
+  background-color: rgba(135, 88, 167, 0.9);
+}
+
+.n-color--persian-pink {
+  background-color: rgba(247, 134, 166, 0.9);
+}
+
+.n-color--locust {
+  background-color: rgba(165, 173, 138, 0.9);
+}
+
+.n-color--celery {
+  background-color: rgba(172, 194, 83, 0.9);
+}
+
+.n-color--apple {
+  background-color: rgba(89, 191, 67, 0.9);
+}
+
+.n-color--golden-grass {
+  background-color: rgba(218, 171, 29, 0.9);
+}
+
+.n-line--separate {
+  border: none;
+  height: 1px;
+  background-color: #e1e1e1;
+}
+
+/*# sourceMappingURL=n-global.css.map */

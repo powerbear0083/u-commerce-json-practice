@@ -1,0 +1,27 @@
+/**
+ * Global css setting
+ */
+
+/* Global layout setting
+   ========================================================================== */
+
+.n-layout, .n-l-row__ad{
+	width: 1004px;
+}
+
+
+.n-w-1010{
+	width: 804px;
+}
+
+.n-l-row__ad{
+	a:nth-child(2){
+		margin-left: 3px;
+		margin-right: 3px;
+	}
+	img{
+		width: 330px;
+		height: 67px;
+		max-width: none;
+	}
+}

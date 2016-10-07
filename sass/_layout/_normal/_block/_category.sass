@@ -1,0 +1,92 @@
+/**
+ * category block css setting
+ */
+
+.n-category
+	&__wrap
+		position: relative
+		z-index: map-get($zindex, base)
+		a 
+			color: $c-gray
+	&__title, &__box, &__list
+		+clearfix
+	&__box
+		height: 400px
+		overflow: hidden
+	&__title
+		margin-bottom: 5px
+	&__links
+		+txt-ellipsis(610)
+		margin-top: 8px
+		margin-right: 5px
+		li 
+			display: inline-block
+		a 
+			+txt-ellipsis(150)
+			display: block
+			padding-left: 20px
+			&:hover
+				color: $c-deep-pink
+
+	&__pic
+		position: relative
+		z-index: map-get($zindex, base)
+		text-align: center
+		width: 180px
+		height: 400px
+		overflow: hidden
+		a:after
+			content: ""
+			border-top: 1px solid $gray-gainsboro
+			border-bottom: 1px solid $gray-gainsboro
+			border-left: 1px solid $gray-gainsboro
+			position: absolute
+			z-index: map-get($zindex, base)
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+	&__txt
+		color: $c-white
+		position: absolute
+		z-index: map-get($zindex, second)
+		width: 180px
+		height: 90px
+		line-height: 1.8
+		padding: 15px 35px 0
+		+font-size(18)
+		font-weight: bold
+		left: 0
+		bottom: 0
+		p 
+			height: 66px
+			overflow: hidden
+	&__list
+		background-color: $c-white
+		border-top: 1px solid $gray-gainsboro
+		border-bottom: 1px solid $gray-gainsboro
+		border-right: 1px solid $gray-gainsboro
+		width: 1080px
+		height: 400px
+		li 
+			float: left
+			width: (1080px / 4) - 1
+			padding: 20px
+			.n-pic
+				margin-bottom: 10px	
+				margin-right: 10px
+				float: left
+				overflow: hidden
+			.n-pd_name
+				margin-top: 10px
+				margin-bottom: 15px
+				height: 56px
+				overflow: hidden
+			img 
+				width: 140px
+				height: 140px
+		a 
+			display: block
+			+clearfix
+		img 
+			display: inline-block

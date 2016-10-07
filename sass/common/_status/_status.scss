@@ -1,0 +1,133 @@
+/**
+ * Set up Global status css setting
+ */
+
+
+/* Global setting
+   ========================================================================== */
+
+.n-is--hide{
+  display: none;
+}
+
+.n-l-row__ad .loading__box img{
+  width: 41px;
+}
+
+/* .loading{
+  &__wrap, &__box{
+    position: absolute;
+    z-index: map-get($zindex, under);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__wrap{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  &__box{
+    width: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+  }
+  &__process{
+    position: relative;
+    z-index: map-get($zindex, under);
+  }
+  &__process li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 2px;
+    margin-left: 2px;
+    border-radius: 100%;
+    background-color: rgba($c-bodygray, 1);
+    @include animation (loading 1.2s infinite ease-in-out);
+  }
+  &__process li:nth-child(1){
+    @include animation-delay (.39s);
+  }
+  &__process li:nth-child(2){
+    @include animation-delay (.52s);
+  }
+  &__process li:nth-child(3){
+    @include animation-delay (.65s);
+  }
+} */
+
+
+@include keyframes (loading) {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+/* nav setting
+   ========================================================================== */
+
+.n-nav {
+  &__wrap.is--fixed {
+    position: fixed;
+    z-index: map-get($zindex, overlay);
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $gray-gainsboro;
+    .n-nav__hotkeyword {
+      @include txt-ellipsis(360);
+    }
+    .n-search--for-nav {
+      display: block;
+    }
+    .n-search__field {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+/* hover effect
+   ========================================================================== */
+
+.n-hover--img a img{
+  @include transform(scale(1));
+  @include transition(0.3s ease-in-out);
+
+}
+.n-hover--img a:hover{
+  img{
+    @include transform(scale(1.1));
+    @include transition(0.3s ease-in-out);
+  }
+}
+
+.n-hover--line li {
+  @include box-shadow(rgba($c-gray-darker, 0.1) 0 1px 2px); 
+  @include transition(0.3s linear);
+}
+
+.n-hover--line li:hover {
+  @include box-shadow(rgba($c-gray-darker, 0.5) 0 2px 3px); 
+  @include transition(0.5s linear);
+}
+
+

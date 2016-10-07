@@ -1,0 +1,204 @@
+/**
+ * Set up Etmall site variable
+ */
+/* Primary color setting
+   ========================================================================== */
+/* Gray color setting
+   ========================================================================== */
+/* font color setting
+   ========================================================================== */
+/* Category color setting
+   ========================================================================== */
+/* Font family setting
+   ========================================================================== */
+/**
+ * Set up All Mixins functions
+ */
+/* base layout align center
+   ========================================================================== */
+/* background setting
+   ========================================================================== */
+/* breakpoint
+   ========================================================================== */
+/* background auto generate width height
+   ========================================================================== */
+/* Clear Float
+   ========================================================================== */
+/* list custom style
+   ========================================================================== */
+/* font size
+   ========================================================================== */
+/* hide text
+   ========================================================================== */
+/* ellipsis text
+   ========================================================================== */
+/* keyframes
+   ========================================================================== */
+/* animation
+   ========================================================================== */
+/* animation-name
+   ========================================================================== */
+/* animation-delay
+   ========================================================================== */
+/**
+ * Management z-index setting
+ */
+/* Common z-index setting
+   ========================================================================== */
+/**
+ * Usage
+ * 
+ * parent selectors
+	z-index: map-get($zindex, base)
+	child selectors
+		z-index: map-get($zindex, dropdown)
+ */
+/* Base z-index setting
+   ========================================================================== */
+/**
+ * Usage
+ * 
+ * parent selectors
+	z-index: index($base-zindex, zindex1)
+	child selectors
+		z-index: index($base-zindex, zindex2)
+ */
+/**
+ * Set up Susy base set
+ */
+/**
+ *  small size index css
+ */
+.n-content__nav {
+  margin-left: -503px;
+}
+
+.n-banner__area {
+  margin-left: 0;
+}
+.n-banner__promo {
+  display: none;
+}
+.n-banner__box {
+  width: 1004px;
+  padding-left: 190px;
+}
+
+.n-l-aside {
+  margin-right: 10px;
+}
+
+.n-rank__wrap {
+  width: 190px;
+}
+.n-rank__list {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.n-rank__list .n-pic {
+  margin-right: 5px;
+}
+.n-rank__more {
+  width: 188px;
+  margin-left: -10px;
+}
+
+.n-fb__warp {
+  width: 190px;
+}
+.n-fb__warp .fb_iframe_widget span, .n-fb__warp .fb_iframe_widget iframe {
+  width: 190px !important;
+  height: 283px !important;
+}
+
+.n-r__aside {
+  display: none;
+}
+
+.n-main__wrap {
+  width: 395px;
+  margin-right: 12px;
+}
+.n-main__wrap + .n-main__wrap {
+  margin-right: 0;
+}
+.n-main__detail, .n-main__caption {
+  width: 205px;
+}
+.n-main__promo li {
+  margin-right: 14px;
+}
+.n-main__promo li:nth-child(4) {
+  margin-right: 0;
+}
+.n-main__promo li:last-child {
+  display: none;
+}
+
+.n-self__list li {
+  width: 25%;
+  height: 220px;
+}
+.n-self__list li:nth-child(5n+5) {
+  display: none;
+}
+
+.n-bank__list {
+  margin-left: 0;
+  margin-right: 0;
+}
+.n-bank__list li:last-child {
+  display: none;
+}
+.n-bank__list li:nth-child(5) {
+  margin-right: 0;
+}
+.n-bank__list li {
+  width: 190px;
+  margin-right: 5px;
+}
+.n-bank__list a {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/**
+ * category block css setting
+ */
+.n-category__list {
+  width: 820px;
+  position: relative;
+  z-index: 1;
+}
+.n-category__list li {
+  width: 272.3333333333px;
+  padding: 25px 20px 20px;
+}
+.n-category__list li .n-pic {
+  width: 130px;
+}
+.n-category__list li .n-pd_name {
+  margin-bottom: 10px;
+}
+.n-category__list li img {
+  width: 130px;
+  height: 130px;
+}
+.n-category__list li:nth-child(n+7) {
+  display: none;
+}
+
+/**
+ * youlike block css setting
+ */
+.n-youlike__list li {
+  margin-right: 14px;
+}
+.n-youlike__list li:nth-child(5n+5) {
+  display: none;
+}
+.n-youlike__list li:nth-child(5n-1) {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=n-s-index.css.map */

@@ -1,0 +1,104 @@
+/**
+ * Set up form elements setting
+ */
+
+/* Form core
+   ========================================================================== */
+
+.n-form--control {
+  padding: 11px; 
+  display: inline-block;
+  border: 1px solid $gray-gainsboro; 
+  color: $c-gray;
+  vertical-align: middle;
+}
+
+/* Form common style
+   ========================================================================== */
+
+
+.n-form--radio{
+  margin-right: 20px;
+  label{
+    cursor: pointer;
+  }
+}
+
+/* Focus style
+   ========================================================================== */
+
+.n-form--control:focus {
+  outline: 0;
+  border-color: $c-blue; 
+}
+
+// .n-form input[type="file"]:focus,
+// .n-form input[type="radio"]:focus,
+// .n-form input[type="checkbox"]:focus {
+//   outline: thin solid $c-blue; 
+//   outline: 1px auto $c-blue; 
+// }
+
+/* Have value style
+   ========================================================================== */
+
+// .form--edit, select.form--edit{
+//   background-color: $gray-ghost-white;
+//   color: $c-gray; 
+// }
+
+
+/* Disable style
+   ========================================================================== */
+
+.n-form--disabled {
+  cursor: not-allowed;
+  background-color: $c-bodygray;
+  color: $c-gray; 
+  &:focus{
+     border-color: $gray-gainsboro; 
+  }
+}
+
+/* inline layout style
+   ========================================================================== */
+
+.n-form--inline{
+  display: inline-block;
+}
+    
+/* Stacked layout style
+   ========================================================================== */
+
+.n-form--stacked input[type="text"],
+.n-form--stacked input[type="password"],
+.n-form--stacked input[type="email"],
+.n-form--stacked input[type="url"],
+.n-form--stacked input[type="date"],
+.n-form--stacked input[type="month"],
+.n-form--stacked input[type="time"],
+.n-form--stacked input[type="datetime"],
+.n-form--stacked input[type="datetime-local"],
+.n-form--stacked input[type="week"],
+.n-form--stacked input[type="number"],
+.n-form--stacked input[type="search"],
+.n-form--stacked input[type="tel"],
+.n-form--stacked input[type="color"],
+.n-form--stacked input[type="file"],
+.n-form--stacked select,
+.n-form--stacked label,
+.n-form--stacked textarea{
+  display: block;
+  //margin-top: 5px;
+}
+
+
+
+
+/* Form theme
+   ========================================================================== */
+
+.form--error{
+  color: $c-primary;
+}
+

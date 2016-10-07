@@ -1,0 +1,112 @@
+/**
+ * Header's box header part css setting
+ */
+
+.n-header
+	&__wrap
+		+clearfix
+		padding-top: 20px
+		padding-bottom: 20px
+		.n-logo
+			margin-top: 5px
+			margin-right: 20px
+		.n-single--ad
+			margin-right: 30px
+		.n-three--ad
+			li
+				display: inline-block
+				margin-left: 5px
+
+.n-search
+	&__box
+		width: 580px
+	&__field
+		background-color: $c-deep-pink
+		padding: 2px
+		margin-bottom: 10px
+		height: 42px
+		+clearfix
+		.n-form--control
+			border: none
+			padding-bottom: 12px
+			width: 420px
+		.n-btn--primary
+			background-color: $c-deep-pink
+			width: 60px
+			height: 38px
+			&:hover, &:focus
+				background-color: darken($c-deep-pink, 10%)
+		.n-icon--search
+			background-repeat: no-repeat
+	&__keyword
+		+clearfix
+		ul 
+			+txt-ellipsis(540)
+		li 
+			display: inline-block
+			margin-right: 10px
+		a 
+			display: block
+	&__caption 
+		width: 40px
+	&__catalog.is--drop 
+		> a 
+			border-left: 1px solid $c-deep-pink
+			color: $c-deep-pink
+	&__catalog
+		position: relative
+		z-index: map-get($zindex, third) 
+		> a 
+			background-color: $c-white
+			border-left: 1px solid $gray-gainsboro
+			display: block
+			padding: 10px
+			width: 96px
+			height: 38px
+			text-align: center
+			.n-icon--dropmenu
+				float: right
+				margin-top: 5px
+		.n-search__catalog-drop
+			display: none
+			background-color: $c-white
+			border: 1px solid $c-deep-pink
+			border-top: none
+			padding: 15px
+			position: absolute
+			z-index: map-get($zindex, dropdown)
+			width: 220px
+			right: -62px
+			top: 38px
+			ul 
+				margin-bottom: 5px
+			li 
+				display: inline-block
+				width: 92px
+				margin-bottom: 10px
+				a 
+					display: block
+					+txt-ellipsis(92)
+			&:after
+				content: ""
+				border-top: 1px solid $c-deep-pink
+				width: 61px
+				position: absolute
+				z-index: map-get($zindex, dropdown)
+				top: 0
+				left: 0
+.n-search--for-nav
+	display: none
+
+
+.n-search
+	&__box.move--nav
+		position: fixed
+		z-index: map-get($zindex, modal)
+		top: 6px
+		right: 50%
+		margin-right: -630px
+		.n-search__keyword
+			display: none
+
+

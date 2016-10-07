@@ -1,0 +1,21 @@
+/**
+ * category block css setting
+ */
+
+.n-category
+	&__list 
+		width: 820px
+		position: relative
+		z-index: map-get($zindex, base)	
+		li 
+			width: (820px / 3) - 1
+			padding: 25px 20px 20px 
+			.n-pic
+				width: 130px
+			.n-pd_name
+				margin-bottom: 10px	
+			img
+				width: 130px
+				height: 130px
+		li:nth-child(n+7)
+			display: none

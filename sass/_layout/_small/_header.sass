@@ -1,0 +1,24 @@
+/**
+ * Header's box header part css setting
+ */
+
+.n-header
+	&__wrap
+		.n-logo, .n-single--ad
+			margin-right: 15px
+.n-search
+	&__box
+		width: 380px
+	&__field
+		.n-form--control
+			width: 220px
+	&__keyword
+		+txt-ellipsis(380)
+		li:last-child
+			display: none
+		ul
+			+txt-ellipsis(340)
+
+.n-search
+	&__box.move--nav
+		margin-right: -498px

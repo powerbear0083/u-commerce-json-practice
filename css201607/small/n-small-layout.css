@@ -1,0 +1,194 @@
+/**
+ * Set up Etmall site variable
+ */
+/* Primary color setting
+   ========================================================================== */
+/* Gray color setting
+   ========================================================================== */
+/* font color setting
+   ========================================================================== */
+/* Category color setting
+   ========================================================================== */
+/* Font family setting
+   ========================================================================== */
+/**
+ * Set up All Mixins functions
+ */
+/* base layout align center
+   ========================================================================== */
+/* background setting
+   ========================================================================== */
+/* breakpoint
+   ========================================================================== */
+/* background auto generate width height
+   ========================================================================== */
+/* Clear Float
+   ========================================================================== */
+/* list custom style
+   ========================================================================== */
+/* font size
+   ========================================================================== */
+/* hide text
+   ========================================================================== */
+/* ellipsis text
+   ========================================================================== */
+/* keyframes
+   ========================================================================== */
+/* animation
+   ========================================================================== */
+/* animation-name
+   ========================================================================== */
+/* animation-delay
+   ========================================================================== */
+/**
+ * Management z-index setting
+ */
+/* Common z-index setting
+   ========================================================================== */
+/**
+ * Usage
+ * 
+ * parent selectors
+	z-index: map-get($zindex, base)
+	child selectors
+		z-index: map-get($zindex, dropdown)
+ */
+/* Base z-index setting
+   ========================================================================== */
+/**
+ * Usage
+ * 
+ * parent selectors
+	z-index: index($base-zindex, zindex1)
+	child selectors
+		z-index: index($base-zindex, zindex2)
+ */
+/**
+ * Set up Susy base set
+ */
+/**
+ * Global css setting
+ */
+/* Global layout setting
+   ========================================================================== */
+.n-layout, .n-l-row__ad {
+  width: 1004px;
+}
+
+.n-w-1010 {
+  width: 804px;
+}
+
+.n-l-row__ad a:nth-child(2) {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.n-l-row__ad img {
+  width: 330px;
+  height: 67px;
+  max-width: none;
+}
+
+/**
+ * Header's top nav part css setting
+ */
+.n-top__ad-box {
+  background-color: #ededed;
+}
+.n-top__ad {
+  margin-left: auto;
+  margin-right: auto;
+  height: 65px;
+  width: 1004px;
+  overflow: hidden;
+}
+.n-top__ad img {
+  margin-left: -133px;
+  max-width: 1260px;
+}
+
+/**
+ * Header's box header part css setting
+ */
+.n-header__wrap .n-logo, .n-header__wrap .n-single--ad {
+  margin-right: 15px;
+}
+
+.n-search__box {
+  width: 380px;
+}
+.n-search__field .n-form--control {
+  width: 220px;
+}
+.n-search__keyword {
+  max-width: 380px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.n-search__keyword li:last-child {
+  display: none;
+}
+.n-search__keyword ul {
+  max-width: 340px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.n-search__box.move--nav {
+  margin-right: -498px;
+}
+
+/**
+ * Main nav css setting
+ */
+.n-nav__box {
+  width: 190px;
+}
+.n-nav__box .n-icon--menu {
+  margin-top: 5px;
+}
+.n-nav__menu {
+  width: 190px;
+}
+.n-nav__menu > li {
+  padding: 4px 0;
+  padding-left: 6px;
+}
+.n-nav__catalog {
+  font-size: 13px;
+  font-size: 1.3rem;
+  padding-top: 2px;
+  margin-right: 3px;
+}
+.n-nav__sub {
+  left: 188px;
+}
+.n-nav__count {
+  top: -2px;
+  left: -10px;
+}
+.n-nav__menu li.n-nav--move:hover .n-nav__catalog {
+  margin-left: 25px;
+  margin-right: -5px;
+}
+.n-nav__keywords {
+  font-size: 12px;
+  font-size: 1.2rem;
+  max-width: 116px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.n-nav__keywords a:first-child {
+  margin-right: 5px;
+}
+.n-nav__hotkeyword {
+  max-width: 750px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*# sourceMappingURL=n-small-layout.css.map */

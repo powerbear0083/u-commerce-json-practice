@@ -1,0 +1,58 @@
+/**
+ * Set up icon elements setting
+ */
+
+
+/* Icon's global setting
+   ========================================================================== */
+
+%f-left{
+	float: left;
+}
+
+%f-right{
+	float: right;
+}
+
+[class^="n-icon--"] {
+	display: inline-block;
+}
+
+/* Icon's setting
+   ========================================================================== */
+
+.n-icon--dropmenu{
+	@include bg-sprite(sprite, icon-dropmenu);
+}
+
+.n-icon--menu{
+	@include bg-sprite(sprite, icon-menu);
+}
+
+.n-icon--search{
+	@include bg-sprite(sprite, icon-search);
+}
+
+.n-icon--tv{
+	@include bg-sprite(sprite, icon-tv);
+}
+
+.n-icon--clock{
+	@include bg-sprite(sprite, icon-clock);
+}
+
+.n-icon--refresh{
+	@include bg-sprite(sprite, icon-refresh);
+}
+
+.n-icon-list--arrow{
+	@include bg-sprite(sprite, icon-list-arrow);
+}
+
+.n-icon--top{
+	@include bg-sprite(sprite, icon-top);
+}
+
+.n-icon--cart{
+	@include bg-sprite(sprite, icon-cart);
+}

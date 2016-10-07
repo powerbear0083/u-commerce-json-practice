@@ -1,0 +1,159 @@
+/**
+ * Set up All Mixins functions
+ */
+
+
+/* base layout align center
+   ========================================================================== */
+
+@mixin layout-center($width){
+  width: $width + px;
+  margin: 0 auto;
+}
+
+
+/* background setting
+   ========================================================================== */
+
+@mixin bg($name, $bg, $position: 0 0, $repeat: no-repeat) {
+  background: {
+    image: url("../images/#{$name}.#{$bg}");
+    position: $position;
+    repeat: $repeat;
+  };
+}
+
+/* breakpoint
+   ========================================================================== */
+
+@mixin breakPoint($screen: pad){
+  $map  :  map-get($break_point, $screen);
+  $break:  map-get($map, "break");
+  $layout: map-get($map, "columns");
+
+  @include susy-breakpoint($break, $layout){
+    @content;
+  }
+}
+
+/* background auto generate width height
+   ========================================================================== */
+
+@mixin bg-sprite($folder, $bg-name){
+  $icons: sprite-map("#{$folder}/*.png");
+  &{
+    background: sprite($icons, $bg-name);
+    width: image-width("#{$folder}/#{$bg-name}.png");
+    height: image-height("#{$folder}/#{$bg-name}.png");
+  }
+} 
+
+/* Clear Float
+   ========================================================================== */
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: "";
+    display: block;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* list custom style
+   ========================================================================== */
+
+@mixin dot-style($font, $line-height){
+  content: '·';
+  @include font-size($font);
+  line-height: $line-height;
+  vertical-align: middle;
+  float: left;
+  padding-left: 10px;
+  padding-right: 15px;
+}
+
+/* font size
+   ========================================================================== */
+
+ @mixin font-size($value) {
+  font-size: $value + px;
+  font-size: ($value / 10) + rem;
+}
+
+/* hide text
+   ========================================================================== */
+
+@mixin text-hide {
+  white-space: nowrap;
+  text-indent: 1000%;
+  overflow: hidden;
+}
+
+
+/* ellipsis text
+   ========================================================================== */
+
+
+@mixin txt-ellipsis($maxWidth) {
+  max-width: $maxWidth + px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+/* keyframes
+   ========================================================================== */
+
+@mixin keyframes($animation-name){
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+/* animation
+   ========================================================================== */
+
+@mixin animation($str){
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+/* animation-name
+   ========================================================================== */
+
+@mixin animation-name($name){
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -o-animation-name: $name;
+  animation-name: $name;
+
+}
+
+
+/* animation-delay
+   ========================================================================== */
+
+@mixin animation-delay($delay){
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;
+
+}
+

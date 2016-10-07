@@ -1,0 +1,145 @@
+/**
+ * Header's top nav part css setting
+ */
+
+.n-header
+	background-color: $c-white
+	a 
+		color: $c-gray
+		&:hover
+			color: $c-deep-pink
+.n-top
+	&__ad-box
+		background-color: $c-lightgray
+	&__ad
+		margin-left: auto
+		margin-right: auto
+		height: 65px
+		width: 1260px
+		position: relative
+		z-index: map-get($zindex, base)
+		img 
+			margin-left: auto
+			margin-right: auto
+			height: 65px
+			width: 1260px
+	&--bn-nav
+		position: absolute
+		z-index: map-get($zindex, bnNav)
+		width: 120px
+		height: 13px
+		bottom: 5px
+		right: 0
+		a
+			background-color: rgba($c-gray, 0.85)
+			+border-radius(100%)
+			display: inline-block
+			width: 13px
+			height: 13px
+			margin-left: 5px
+			margin-right: 5px
+		.activeSlide
+			background-color: rgba($c-white, 0.9)
+	&__nav
+		background-color: $c-subduedgray
+		border-top: 1px solid $gray-gainsboro
+		border-bottom: 1px solid $gray-gainsboro
+		+clearfix
+		li 
+			display: inline-block
+			padding-top: 10px
+			padding-bottom: 10px
+			position: relative
+			z-index: map-get($zindex, elt) 
+		a 
+			display: block
+			padding-right: 11px
+			padding-left: 10px
+			//+transition(all 0.2s ease-in-out)
+		.n-left
+			li > a 
+				border-right: 1px solid $gray-gainsboro
+			li:first-child a
+				padding-left: 0
+			li:last-child a
+				border-right: none
+		.n-right
+			li > a
+				border-right: 1px solid $gray-gainsboro
+			li:last-child a
+				padding-right: 0
+				border-right: none
+		.has--drop
+			a 
+				position: relative
+				z-index: map-get($zindex, second) 
+				
+			ul 
+				background-color: $c-white
+				border: 1px solid $gray-gainsboro
+				border-top: none
+				width: 100%
+				position: absolute
+				z-index: map-get($zindex, dropdown)
+				top: 30px
+				+transition(all 0.2s ease-in-out)
+				visibility: hidden
+				opacity: 0
+				li
+					+clearfix
+					padding: 6px 8px
+					display: block
+					> a
+						border: none
+						padding: 0 
+		.has--drop:hover
+			ul
+				opacity: 1
+				top: 38px
+				visibility: visible
+		.n-top__account
+			ul
+				width: 95px
+		.n-top__coupon
+			ul 
+				width: 150px
+			li 
+				width: 100%
+			li:last-child
+				background-color: $c-subduedgray
+				border-top: 1px solid $gray-gainsboro
+				padding: 0
+				.n-left
+					width: 65%
+					border-right: 1px solid $gray-gainsboro
+				a:first-child 
+					padding: 6px 8px
+			ul a 
+				padding: 0
+		.n-top__ponta
+			ul 
+				width: 110px
+		.is--drop
+			.n-icon--dropmenu
+				margin-left: 2px
+			.is--drop-bg
+				display: none	
+			&:hover
+				.is--drop-bg
+					display: block
+					background-color: $c-white
+					border-left: 1px solid $gray-gainsboro
+					border-right: 1px solid $gray-gainsboro
+					position: absolute
+					z-index: map-get($zindex, base)
+					width: 100%
+					height: 105%
+					left: 0
+					top: 0
+			.icon--dropmenu
+				margin-left: 1px
+		.n-top__birthday
+			ul
+				width: 115px
+				
+		
